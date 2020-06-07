@@ -7,38 +7,60 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.transparent,
-       
-      
-      body : Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/universe.jpg"), fit: BoxFit.cover)),
-                child: Stack(
-                  children: <Widget>[
-
-                  Container(
-                    
-                    child: Text(
-                      'modish login form',
-                      
-                      style:
-                        GoogleFonts.aladin(
-                          fontSize: 30,
-                          color: Colors.red
-                      ),
-                  ),
-                  ),
-                  
-                  ],
-                ),
-                ),
-                
+      body : Column(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.fromLTRB(15, 130, 15, 0),
+               child : Stack(
+                 children: <Widget>[
+                    Container(
+                     padding: EdgeInsets.fromLTRB(15, 75, 0, 0),
+                     child: Text(
+                       "Hello",
+                        style: GoogleFonts.montserrat(
+                        textStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 50,
+                                   ) ), ),  ),
+                      Container(
+                       padding: EdgeInsets.fromLTRB(15, 115, 0, 0),
+                       child: Text( 
+                         "There",
+                         style: GoogleFonts.montserrat(
+                         textStyle: TextStyle(
+                         fontSize: 45,
+                                 ) ),  ), ),
+                       Container(
+                        padding: EdgeInsets.fromLTRB(135, 85, 0, 0),
+                        child: Text(
+                            '.',
+                          style: GoogleFonts.montserrat(
+                          textStyle: TextStyle(
+                          color: Colors.green,
+                          fontSize: 80,
+                                 ) ),  ), ),
+                                         
+                                          ],
+                                        ),
+                                    ),
+                          Container(
+                             padding: EdgeInsets.fromLTRB(15, 30, 20, 0),
+                             child: Column(
+                               children: <Widget>[
+                                 TextField(
+                                  
+                                 )
+                               ],
+                             ),
+                          )
+                                  ],
+                                ),
+ 
     );
   }
 }
